@@ -8,23 +8,20 @@ android {
 
     defaultConfig {
         applicationId "com.fastfun.tetris"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
 
         ndk {
-            // Specifies the ABI configurations of your native
-            // libraries Gradle should build and package with your APK.
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
     }
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -37,5 +34,4 @@ android {
 
 dependencies {
     implementation files('libs/td1.jar')
-    implementation 'com.android.support:multidex:1.0.3'
 }
