@@ -36,6 +36,6 @@ android {
 }
 
 dependencies {
-    implementation files('libs/td1 - Copy (2).jar')
+    implementation files('libs/td1.jar')
     implementation 'com.android.support:multidex:1.0.3'
 }
